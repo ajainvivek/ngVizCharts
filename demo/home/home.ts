@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NgVizPie } from '../../src/component';
+import { Pie } from '../../src/component';
 
 @Component({
     selector: 'app',
-    directives: [NgVizPie],
+    directives: [Pie],
     template: require('./home.html')
 })
 

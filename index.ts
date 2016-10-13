@@ -1,4 +1,4 @@
-const MyComponent = require('./dist/component.bundle.js').MyComponent;
+const Pie = require('./dist/component.bundle.js').Pie;
 
-exports.MyComponent = MyComponent;
-export {MyComponent};
+exports.Pie = Pie;
+export {Pie};

@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 // Load the implementations that should be tested
-import {MyComponent} from './component';
+import {Pie} from './component';
 
 describe('MyComponent', () => {
     let builder: TestComponentBuilder;
@@ -21,7 +21,7 @@ describe('MyComponent', () => {
     describe('when the controller is instantiated', () => {
         it('has its properties defined', () => {
             builder.createAsync(TestApp).then((fixture: ComponentFixture<TestApp>) => {
-                const component = fixture.debugElement.query(By.directive(MyComponent)).componentInstance;
+                const component = fixture.debugElement.query(By.directive(Pie)).componentInstance;
                 expect(component.helloWorld).toBeDefined();
             });
         });
@@ -31,7 +31,7 @@ describe('MyComponent', () => {
 @Component({
     selector: 'test-app',
     template: `<my-component></my-component>`,
-    directives: [MyComponent]
+    directives: [Pie]
 })
 class TestApp {
     ngOnInit() {

@@ -6,7 +6,7 @@ import {
 const styles = [require('./style.scss').toString()],
     template = require('./template.html');
 
-import {NgVizPieInterface} from './component.d';
+import {PieInterface} from './component.d';
 
 /**
  * A component for entering a list of terms to be used with ngModel.
@@ -18,7 +18,7 @@ import {NgVizPieInterface} from './component.d';
     styles,
     template
 })
-export class NgVizPie implements NgVizPieInterface, OnInit {
+export class Pie implements PieInterface, OnInit {
 
     public helloWorld(): string {
         return 'Hello World';

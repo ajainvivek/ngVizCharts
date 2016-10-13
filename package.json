@@ -1,6 +1,6 @@
 {
   "name": "ng-viz-charts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Visualisation charts for Angular 2 apps.",
   "scripts": {
     "typings-install": "typings install",

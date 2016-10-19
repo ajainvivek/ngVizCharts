@@ -2,10 +2,20 @@
 de generated files
 node_modules
 npm-debug.log
+dist
 
 # OS generated files
 Thumbs.db
 .DS_Store
+*.js
+*.js.map
+
 
 # Ignored files
 .vscode
+src/**/*.js
+src/**/*.js.map
+demo/**/*.js
+demo/**/*.js.map
+
+

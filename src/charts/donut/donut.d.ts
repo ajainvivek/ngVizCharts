@@ -1,0 +1,4 @@
+interface DonutInterface {
+}
+
+export {DonutInterface};

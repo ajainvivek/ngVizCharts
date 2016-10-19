@@ -4,10 +4,10 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["@angular/core", "@angular/common"], factory);
 	else if(typeof exports === 'object')
-		exports["angular2-component-starter"] = factory(require("@angular/core"), require("@angular/common"));
+		exports["ng-viz-charts"] = factory(require("@angular/core"), require("@angular/common"));
 	else
-		root["angular2-component-starter"] = factory(root["@angular/core"], root["@angular/common"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_7__) {
+		root["ng-viz-charts"] = factory(root["@angular/core"], root["@angular/common"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_12__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -50,33 +50,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(7);
+	module.exports = __webpack_require__(12);
 
 
 /***/ },
-/* 1 */
+
+/***/ 1:
 /***/ function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ },
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
+
+/***/ 12:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_12__;
 
 /***/ }
-/******/ ])
+
+/******/ })
 });
 ;
 //# sourceMappingURL=vendor.map

@@ -1,6 +1,6 @@
 {
   "name": "ng-viz-charts",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "Visualisation charts for Angular 2 apps.",
   "scripts": {
     "typings-install": "typings install",
@@ -63,7 +63,11 @@
     "webpack-merge": "^0.8.4",
     "zone.js": "~0.6.12"
   },
-  "dependencies": {},
+  "dependencies": {
+    "d3": "^3.5.17",
+    "d3-selection-multi": "^1.0.0",
+    "jquery": "^3.1.1"
+  },
   "keywords": [
     "ng-viz-charts",
     "angular 2",

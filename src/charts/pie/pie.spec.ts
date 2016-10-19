@@ -11,9 +11,9 @@ import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 // Load the implementations that should be tested
-import {Pie} from './component';
+import {Pie} from './pie';
 
-describe('MyComponent', () => {
+describe('Pie', () => {
     let builder: TestComponentBuilder;
 
     beforeEach(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => builder = tcb));
@@ -30,7 +30,7 @@ describe('MyComponent', () => {
 
 @Component({
     selector: 'test-app',
-    template: `<my-component></my-component>`,
+    template: `<ng-viz-pie></ng-viz-pie>`,
     directives: [Pie]
 })
 class TestApp {

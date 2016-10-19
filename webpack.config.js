@@ -8,13 +8,14 @@ var autoprefixer = require('autoprefixer');
 var webpackConfig = {
     entry: {
         'vendor': ['@angular/core', '@angular/common'],
-        'component': './src/component.ts'
+        'pie-chart': './src/charts/pie/pie.ts',
+        'donut-chart': './src/charts/donut/donut.ts'
     },
 
     output: {
         path: './dist',
         libraryTarget: "umd",
-        library: 'angular2-component-starter',
+        library: 'ng-viz-charts',
         umdNamedRequire: true
     },
 

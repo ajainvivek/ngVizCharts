@@ -2,9 +2,10 @@
   <br>
   <img src="https://raw.githubusercontent.com/ajainvivek/ngVizCharts/master/logo.png" />
   <br>
+  Angular 2 Visualisation Charts
+  <br>
+  <br>
 </h1>
-
-# Angular 2 Visualisation Charts
 
 **ngVizCharts** is an Angular 2 add on for visualizing data using d3. ngVizCharts bundle comprises of visualisation charts to decorate your data.
 

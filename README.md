@@ -22,7 +22,7 @@
 ## Resources
 
 * [API Reference]()
-* [Gallery]()
+* [Gallery](https://ajainvivek.github.io/ngVizCharts/)
 
 ## Feature Roadmap
 

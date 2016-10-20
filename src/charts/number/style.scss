@@ -1,8 +1,13 @@
- .donutchart {
-    cursor:pointer;
-    pointer-events: all;
-  }
-  
+.numberchart {
+  cursor:pointer;
+  pointer-events: all;
+}
+
+.highlight {
+  fill: #ccc;
+}
+
+
 .tooltip {
     position: absolute;
     float: left;

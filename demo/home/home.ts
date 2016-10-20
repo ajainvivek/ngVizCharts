@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Pie } from '../../src/charts/pie/pie';
 import { Donut } from '../../src/charts/donut/donut';
+import { Number } from '../../src/charts/number/number';
 import * as d3 from 'd3';
 
 @Component({
     selector: 'app',
-    directives: [Pie, Donut],
+    directives: [Pie, Donut, Number],
     template: require('./home.html')
 })
 
@@ -58,6 +59,20 @@ export class App {
         label: 'Queesland',
         value: 400
     }];
+
+    numberData: any = [{
+        id: 1,
+        label: 'Sydney',
+        value: 20000
+    }, {
+        id: 2,
+        label: 'Canberra',
+        value: 1000
+    }, {
+        id: 3,
+        label: 'New England',
+        value: 10000
+    }]
 
     constructor() {
 

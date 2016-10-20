@@ -9,7 +9,8 @@ var webpackConfig = {
     entry: {
         'vendor': ['@angular/core', '@angular/common'],
         'pie-chart': './src/charts/pie/pie.ts',
-        'donut-chart': './src/charts/donut/donut.ts'
+        'donut-chart': './src/charts/donut/donut.ts',
+        'number-chart': './src/charts/number/number.ts'
     },
 
     output: {

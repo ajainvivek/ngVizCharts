@@ -2,6 +2,7 @@
   "name": "ng-viz-charts",
   "version": false,
   "globalDependencies": {
+    "accounting": "registry:dt/accounting#0.3.2+20160316155526",
     "d3": "registry:dt/d3#0.0.0+20160907005744",
     "es6-collections": "registry:dt/es6-collections#0.5.1+20160316155526",
     "es6-promise": "registry:dt/es6-promise#0.0.0+20160423074304",

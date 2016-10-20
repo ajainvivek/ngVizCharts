@@ -34,7 +34,7 @@ export class Donut implements DonutInterface, OnInit, OnChanges, AfterViewInit {
     @Input() width: number = 200;
     @Input() ease: string = 'bounce';
     @Input() duration: number = 1000;
-    @Input() selection: string = 'multi'; // multi|single|none
+    @Input() selection: string = 'single'; // multi|single|none
     @Input() thicknesss: number = 0.6;
     @Input() colors: any = {
         start: '#007AFF',
@@ -183,15 +183,15 @@ export class Donut implements DonutInterface, OnInit, OnChanges, AfterViewInit {
     }
 
     /***
-     * Check if all selected or not
+     * Check if any arc is selected
      */
-    isAllArcSelected() {
+    isAnyArcSelected() {
         let g = this.donutContainer;
         let data = this.data;
-        let isSelected = true;
+        let isSelected = false;
         g.datum(data).selectAll("path").each(function(d){
-            if (!d.selected || d.selected === null) {
-                isSelected = false;
+            if (d.selected) {
+                isSelected = true;
                 return;
             }
         });
@@ -295,6 +295,9 @@ export class Donut implements DonutInterface, OnInit, OnChanges, AfterViewInit {
                     
                 }                
             });
+            if (!self.isAnyArcSelected()) { // If none are selected then reset chart
+                self.resetChart();
+            }
             let selections = g.datum(data).selectAll("path").data().map((selection) => {
                 let data = selection.data;
                 data.selected = selection.selected;

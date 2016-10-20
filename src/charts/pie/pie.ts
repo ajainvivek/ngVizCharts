@@ -36,8 +36,8 @@ export class Pie implements PieInterface, OnInit, OnChanges, AfterViewInit {
     @Input() duration: number = 1000;
     @Input() selection: string = 'multi'; // multi|single|none
     @Input() colors: any = {
-        start: '#007AFF',
-        end: '#FFF500'
+        start: '#ff6384',
+        end: '#36a2eb'
     };
     @Output() onSelection: EventEmitter<any> = new EventEmitter<any>();
 
@@ -180,15 +180,15 @@ export class Pie implements PieInterface, OnInit, OnChanges, AfterViewInit {
     }
 
     /***
-     * Check if all selected or not
+     * Check if any arc is selected
      */
-    isAllArcSelected() {
+    isAnyArcSelected() {
         let g = this.pieContainer;
         let data = this.data;
-        let isSelected = true;
+        let isSelected = false;
         g.datum(data).selectAll("path").each(function(d){
-            if (!d.selected || d.selected === null) {
-                isSelected = false;
+            if (d.selected) {
+                isSelected = true;
                 return;
             }
         });
@@ -292,6 +292,10 @@ export class Pie implements PieInterface, OnInit, OnChanges, AfterViewInit {
                     
                 }                
             });
+            if (!self.isAnyArcSelected()) { // If none are selected then reset chart
+                self.resetChart();
+            }
+            
             let selections = g.datum(data).selectAll("path").data().map((selection) => {
                 let data = selection.data;
                 data.selected = selection.selected;

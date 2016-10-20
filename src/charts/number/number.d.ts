@@ -1,0 +1,4 @@
+interface NumberInterface {
+}
+
+export {NumberInterface};

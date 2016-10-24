@@ -1,5 +1,13 @@
 <main>
-	<ng-viz-number [data]="numberData"></ng-viz-number>
-	<ng-viz-pie [data]="pieData" height="400" width="400"></ng-viz-pie>
-	<ng-viz-donut [data]="donutData" height="500" width="500"></ng-viz-donut>
+	<div class="container">
+		<ng-viz-number [data]="numberData"></ng-viz-number>
+	</div>
+	<div class="container">
+		<ng-viz-pie [data]="pieData" height="400" width="400"></ng-viz-pie>
+	</div>
+	<div class="container" style="position: relative; height: 500px; width: 100%;">
+		<div class="inner-container" style="position: relative; height: 100%; width: 100%;">
+			<ng-viz-donut [data]="donutData" height="400" width="400" responsive="true"></ng-viz-donut>
+		</div>
+	</div>
 </main>

@@ -35,11 +35,12 @@ export class Donut implements DonutInterface, OnInit, OnChanges, AfterViewInit {
     @Input() ease: string = 'bounce';
     @Input() duration: number = 1000;
     @Input() selection: string = 'single'; // multi|single|none
-    @Input() thicknesss: number = 0.6;
+    @Input() thickness: number = 0.6;
     @Input() colors: any = {
         start: '#007AFF',
         end: '#FFF500'
     };
+    @Input() responsive: boolean = false;
     @Input() padding: number = 0.02;
     @Output() onSelection: EventEmitter<any> = new EventEmitter<any>();
 
@@ -98,10 +99,19 @@ export class Donut implements DonutInterface, OnInit, OnChanges, AfterViewInit {
      */
     _constructSvgContainer() {
         let container = this.container.nativeElement;
+        
         this.svg = d3.select(container)
-                    .append('svg')
-                    .attr('height', this.height)
-                    .attr('width', this.width);
+                    .append('svg');
+        if (this.responsive) {
+            this.svg
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr('viewBox', `0 0 ${this.width} ${this.height}`)
+            .classed("svg-content-responsive", true);
+        } else {
+            this.svg
+            .attr('height', this.height)
+            .attr('width', this.width);
+        }           
     }
 
     /***
@@ -164,7 +174,7 @@ export class Donut implements DonutInterface, OnInit, OnChanges, AfterViewInit {
      */
     setThickness() {
         let min = Math.min(this.width, this.height);
-        let thickness = this.thicknesss;
+        let thickness = this.thickness;
         this.oRadius =  min / 2 * 0.9;
         this.iRadius =  min / 2 * thickness;
     }

@@ -7,7 +7,7 @@
 		exports["ng-viz-charts"] = factory(require("@angular/core"), require("@angular/common"));
 	else
 		root["ng-viz-charts"] = factory(root["@angular/core"], root["@angular/common"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_12__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_15__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -56,7 +56,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(12);
+	module.exports = __webpack_require__(15);
 
 
 /***/ },
@@ -68,10 +68,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 12:
+/***/ 15:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_12__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_15__;
 
 /***/ }
 

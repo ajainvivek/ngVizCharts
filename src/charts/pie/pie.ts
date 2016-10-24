@@ -35,6 +35,7 @@ export class Pie implements PieInterface, OnInit, OnChanges, AfterViewInit {
     @Input() ease: string = 'bounce';
     @Input() duration: number = 1000;
     @Input() selection: string = 'multi'; // multi|single|none
+    @Input() responsive: boolean = false;
     @Input() colors: any = {
         start: '#ff6384',
         end: '#36a2eb'
@@ -97,9 +98,17 @@ export class Pie implements PieInterface, OnInit, OnChanges, AfterViewInit {
     _constructSvgContainer() {
         let container = this.container.nativeElement;
         this.svg = d3.select(container)
-                    .append('svg')
-                    .attr('height', this.height)
-                    .attr('width', this.width);
+                    .append('svg');
+        if (this.responsive) {
+            this.svg
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr('viewBox', `0 0 ${this.width} ${this.height}`)
+            .classed("svg-content-responsive", true);
+        } else {
+            this.svg
+            .attr('height', this.height)
+            .attr('width', this.width);
+        }
     }
 
     /***
